@@ -7,7 +7,6 @@ Author :Kaustubh Devkar
 from sklearn.externals import joblib
 from sklearn import datasets
 import numpy as np
-from sklearn.metrics import classification_report
 #for creating Neural Network  I am using  MLPClassifier from sklearn
 
 from sklearn.neural_network.multilayer_perceptron import  MLPClassifier
@@ -43,7 +42,8 @@ Final Output:
 Iteration 33, loss = 0.00299869
 '''
 
-print("Training set score: %f" % mlp.score(X_train, y_train))
-print("Test set score: %f" % mlp.score(X_test, y_test))
+print("Training set score: %f" % mlp.score(X_train, y_train)) #output : 0.99
+print("Test set score: %f" % mlp.score(X_test, y_test))     #output :0.98
 
+#saving our model
 joblib.dump(mlp, "model.pkl")
