@@ -12,7 +12,7 @@ y = np.array(dataset.target) #Our labels
 X =  X.astype('float32') 
 
 #getting Our Test Data
-X_test,y_test = X[:60000], y[:60000]
+X_test,y_test = X[60000:], y[60000:]
  
 
 
@@ -28,8 +28,7 @@ y_pred = model.predict(X_test)
 
 print(classification_report(y_pred,y_test))
 
-#Based On the output of above line We can say that out model
-#has performed Pretty good!
+
 
 
 
