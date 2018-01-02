@@ -12,7 +12,7 @@ y = np.array(dataset.target) #Our labels
 X =  X.astype('float32') 
 
 
-X_test,y_test = X[:60000], y[:60000]
+X_test,y_test = X[60000:], y[60000:]
  
 
 
