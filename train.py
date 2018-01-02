@@ -24,7 +24,7 @@ X_train, X_test = X[:60000], X[60000:]
 y_train, y_test = y[:60000], y[60000:]
 
 
-#Normalizing Our Features into in range 0 and 1
+#Normalizing Our Features in range 0 and 1
 X_train = X_train /255
 X_test = X_test /255
 

@@ -11,23 +11,28 @@ y = np.array(dataset.target) #Our labels
 
 X =  X.astype('float32') 
 
-
+#getting Our Test Data
 X_test,y_test = X[:60000], y[:60000]
  
 
 
-#Normalizing Our Features into in range 0 and 1
+#Normalizing Our Features in range 0 and 1
 
 X_test = X_test /255
 
 #loading out saved model
 model = joblib.load('model.pkl')
 
+#predicting Now
 y_pred = model.predict(X_test)
 
 print(classification_report(y_pred,y_test))
 
 #Based On the output of above line We can say that out model
-#has performed Pretty good
+#has performed Pretty good!
+
+
+
+
 
 
