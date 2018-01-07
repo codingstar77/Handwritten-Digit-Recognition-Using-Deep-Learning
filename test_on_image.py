@@ -40,8 +40,11 @@ for c in cnts:
 
         roi = roi.reshape(1,784)
         prediction = model.predict(roi)
+        probability = model.predict_proba(roi)
+        print(probability)
         cv2.rectangle(img,(x,y),(x+w,y+h),(0,0,255),1)
-        cv2.putText(img,str(int(prediction)),(x+2,y-5),cv2.FONT_HERSHEY_SIMPLEX,1.0,(0,255,0),2)
+        cv2.putText(img,str(int(prediction)),(x,y),cv2.FONT_HERSHEY_SIMPLEX,0.8,(0,255,0),1)
+        cv2.putText(img,str((max(probability[0])*100))+"%",(x,y+h),cv2.FONT_HERSHEY_SIMPLEX,0.5,(0,255,0),1)
     except Exception as e:
         print(e)
         pass
