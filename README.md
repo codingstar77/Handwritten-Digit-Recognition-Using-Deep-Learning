@@ -20,6 +20,18 @@ Requirements : Python 3.5,sklearn,opencv,numpy,imutils
 
 ![alt text](https://github.com/kaustubhdevkar/Handwritten-Digit-Recognition-Using-Deep-Learning/blob/master/result.jpg)
 
+>Another sample image is ,
+
+![alt text](https://github.com/kaustubhdevkar/Handwritten-Digit-Recognition-Using-Deep-Learning/blob/master/sample_image2.jpg)
+
+>Its result is:
+
+![alt text](https://github.com/kaustubhdevkar/Handwritten-Digit-Recognition-Using-Deep-Learning/blob/master/result2.jpg)
+
+
+> As we can see in above image ,one of our digit gets classified incorrectly!
+
 > One of the key thing to remember here is that extracting digit area from the natural image requires thresholding
 	which is ofcourse in some cases leads to error,hence testing images should have proper exposure and evenly 
 	distributed brightness
+
