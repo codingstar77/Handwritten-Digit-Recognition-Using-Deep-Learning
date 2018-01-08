@@ -7,7 +7,7 @@ import numpy as np,cv2,imutils
 from sklearn.externals import joblib
 
 #reading image
-img = cv2.imread('sample_image2.jpg')
+img = cv2.imread('sample_image.jpg')
 #resizing image
 img = imutils.resize(img,width=300)
 #showing original image
@@ -25,7 +25,7 @@ blackhat = cv2.morphologyEx(gray,cv2.MORPH_BLACKHAT,kernel)
 
 
 #applying OTSU's thresholding
-ret,thresh = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+ret,thresh = cv2.threshold(blackhat,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 
 #performing erosion and dilation
 opening = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, kernel)
@@ -63,7 +63,7 @@ for c in cnts:
         
     except Exception as e:
         print(e)
-        pass
+        
 img = imutils.resize(img,width=500)
 
 #showing the output
