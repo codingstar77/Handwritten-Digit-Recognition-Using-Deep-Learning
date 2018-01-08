@@ -7,7 +7,7 @@ import numpy as np,cv2,imutils
 from sklearn.externals import joblib
 
 #reading image
-img = cv2.imread('sample_image.jpg')
+img = cv2.imread('sample_image2.jpg')
 #resizing image
 img = imutils.resize(img,width=300)
 #showing original image
@@ -68,5 +68,5 @@ img = imutils.resize(img,width=500)
 
 #showing the output
 cv2.imshow('Detection',img)
-cv2.imwrite('result.jpg',img)
+cv2.imwrite('result2.jpg',img)
                
