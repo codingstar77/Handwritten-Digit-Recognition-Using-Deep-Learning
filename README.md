@@ -16,5 +16,7 @@ Requirements : Python 3.5,sklearn,opencv,numpy
 
 ![alt text](https://github.com/kaustubhdevkar/Handwritten-Digit-Recognition-Using-Deep-Learning/blob/master/sample_image.jpg)
 
+> Recognized digits are as Follows:
 
+![alt text](https://github.com/kaustubhdevkar/Handwritten-Digit-Recognition-Using-Deep-Learning/blob/master/result.jpg)
 
