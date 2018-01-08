@@ -52,7 +52,7 @@ for c in cnts:
         roi = mask[y-7:y+h+7,x-7:x+w+7]       
         roi = cv2.resize(roi,(28,28))
         roi = np.array(roi)
-
+        #reshaping roi to feed image to our model
         roi = roi.reshape(1,784)
 
         #predicting
