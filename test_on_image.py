@@ -1,14 +1,13 @@
 '''
 Author:Kaustubh Devkar
 (kdevkar1998@gmail.com)
-
 '''
 #importing required modules
 import numpy as np,cv2,imutils
 from sklearn.externals import joblib
 
 #reading image
-img = cv2.imread('sample_image.jpg')
+img = cv2.imread('sample_image2.jpg')
 #resizing image
 img = imutils.resize(img,width=300)
 #showing original image
@@ -24,8 +23,9 @@ kernel = np.ones((40,40),np.uint8)
 #applying blackhat thresholding
 blackhat = cv2.morphologyEx(gray,cv2.MORPH_BLACKHAT,kernel)
 
+
 #applying OTSU's thresholding
-ret,thresh = cv2.threshold(blackhat,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+ret,thresh = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 
 #performing erosion and dilation
 opening = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, kernel)
