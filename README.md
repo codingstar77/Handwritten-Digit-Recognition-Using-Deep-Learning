@@ -12,5 +12,9 @@ Requirements : Python 3.5,sklearn,opencv,numpy
 
 > sample_images represent the images on which the model is tested
 
+> One of the Sample Image is as follows:
+
+![alt text](https://github.com/kaustubhdevkar/Handwritten-Digit-Recognition-Using-Deep-Learning/blob/master/sample_image.jpg)
+
 
 
