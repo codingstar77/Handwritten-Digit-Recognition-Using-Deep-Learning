@@ -68,4 +68,5 @@ img = imutils.resize(img,width=500)
 
 #showing the output
 cv2.imshow('Detection',img)
+cv2.imwrite('result.jpg',img)
                
