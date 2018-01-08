@@ -8,5 +8,9 @@ Requirements : Python 3.5,sklearn,opencv,numpy
 
 > model.pkl file is our trained Neural Network
 
+> test_on_image.py file is used to test our ANN model on actual images
+
+> sample_images represent the images on which the model is tested
+
 
 
