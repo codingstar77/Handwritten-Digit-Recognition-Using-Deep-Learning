@@ -2,7 +2,7 @@ import numpy as np,cv2,imutils
 from sklearn.externals import joblib
 
 
-img = cv2.imread('sum1.jpg')
+img = cv2.imread('sample_image2.jpg')
 
 img = imutils.resize(img,width=300)
 cv2.imshow("Original",img)
