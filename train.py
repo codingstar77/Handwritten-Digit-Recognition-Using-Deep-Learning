@@ -12,7 +12,7 @@ import numpy as np
 from sklearn.neural_network.multilayer_perceptron import  MLPClassifier
 
 #getting MNIST of size 70k images
-dataset = datasets.fetch_mldata("MNIST Original")
+dataset = datasets.fetch_openml('mnist_784')
 X = np.array(dataset.data)  #Our Features
 y = np.array(dataset.target) #Our labels
 
