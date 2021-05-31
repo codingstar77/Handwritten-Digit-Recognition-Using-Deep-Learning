@@ -1,21 +1,23 @@
 '''
 Author:Kaustubh Devkar
 (kdevkar1998@gmail.com)
+Code is updated for running on google colab
 '''
 #importing required modules
 import numpy as np,cv2,imutils
 from sklearn.externals import joblib
+from google.colab.patches import cv2_imshow
 
 #reading image
-img = cv2.imread('sample_image2.jpg')
+img = cv2.imread('Handwritten-Digit-Recognition-Using-Deep-Learning/sample_image2.jpg')
 #resizing image
 img = imutils.resize(img,width=300)
 #showing original image
-cv2.imshow("Original",img)
+cv2_imshow(img)
 #converting image to grayscale
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 #showing grayscale image
-cv2.imshow("Gray Image",gray)
+cv2_imshow(gray)
 
 #creating a kernel
 kernel = np.ones((40,40),np.uint8)
@@ -31,7 +33,7 @@ ret,thresh = cv2.threshold(blackhat,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 opening = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, kernel)
 
 #finding countours in image
-ret,cnts,hie = cv2.findContours(thresh.copy(),cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+cnts,hie = cv2.findContours(thresh.copy(),cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
 
 #loading our ANN model
 model = joblib.load('model.pkl')
@@ -67,6 +69,5 @@ for c in cnts:
 img = imutils.resize(img,width=500)
 
 #showing the output
-cv2.imshow('Detection',img)
+cv2_imshow(img)
 cv2.imwrite('result2.jpg',img)
-               
