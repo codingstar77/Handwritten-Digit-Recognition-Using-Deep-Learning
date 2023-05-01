@@ -1,7 +1,4 @@
-'''
-Author :Kaustubh Devkar
-(kdevkar1998@gmail.com)
-'''
+
 #importing required modules
 
 from sklearn.externals import joblib
